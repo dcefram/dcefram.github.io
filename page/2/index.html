@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.40.1" />
+	<meta name="generator" content="Hugo 0.49.2" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
@@ -66,21 +66,20 @@
       <div class="subtitle is-6 is-pulled-right">
         
           
-<a class="tags subtitle is-6" href="/tags/golang">#Golang</a>
+<a class="tags subtitle is-6" href="/tags/geek-ism">#Geek-ism</a>
 
 
 
         
       </div>
-      <h2 class="subtitle is-6">August 3, 2017</h2>
-      <h1 class="title"><a href="http://blog.danielcefram.com/blog/update-on-my-go-language-self-study/">Update on my Go Language self study</a></h1>
+      <h2 class="subtitle is-6">May 29, 2017</h2>
+      <h1 class="title"><a href="http://blog.danielcefram.com/blog/my-notes-in-setting-up-arch/">My notes in setting up Arch</a></h1>
       <div class="content">
-        So I&rsquo;ve been busy lately that I wasn&rsquo;t able to update anything in my blog. I&rsquo;ve just refreshed all the exercises in the Tour of Go except for the web crawler.
-Here&rsquo;s the link: https://github.com/dcefram/go-learn/tree/master/tour
-I also tried learning a little web development by following the web development tutorial in Go&rsquo;s official docs. Here&rsquo;s what I built: https://github.com/dcefram/gowiki
-My next stop is to refresh my knowledge in Gin, and start building a generic web platform for posting &ldquo;tutorials&rdquo;.
+        I&rsquo;m aware that there are many many articles on how to setup Arch Linux, with the official Wiki as the best one to check out first.
+I just documented my experience on setting up Arch with the objective that I should be able replicate the same setup and environment on other Computers if needed.
+Install Reflector This is so that we would use the fastest server in our mirrorlist
         
-        <a class="button is-link" href="http://blog.danielcefram.com/blog/update-on-my-go-language-self-study/" style="height:28px">
+        <a class="button is-link" href="http://blog.danielcefram.com/blog/my-notes-in-setting-up-arch/" style="height:28px">
           Read more
           <span class="icon is-small">
             <i class="fa fa-angle-double-right"></i>
@@ -94,20 +93,19 @@ My next stop is to refresh my knowledge in Gin, and start building a generic web
       <div class="subtitle is-6 is-pulled-right">
         
           
-<a class="tags subtitle is-6" href="/tags/golang">#Golang</a>
+<a class="tags subtitle is-6" href="/tags/geek-ism">#Geek-ism</a>
 
 
 
         
       </div>
-      <h2 class="subtitle is-6">July 22, 2017</h2>
-      <h1 class="title"><a href="http://blog.danielcefram.com/blog/learning-go-fourth-exercise/">Learning Go: Fourth Exercise</a></h1>
+      <h2 class="subtitle is-6">April 24, 2017</h2>
+      <h1 class="title"><a href="http://blog.danielcefram.com/blog/when-distro-hopping/">When distro hopping...</a></h1>
       <div class="content">
-        The fourth exercise is all about function closures. We&rsquo;re tasked to create a Fibonacci function using function closures.
-Here&rsquo;s the link: https://tour.golang.org/moretypes/26
-package main import &#34;fmt&#34; // fibonacci is a function that returns // a function that returns an int. func fibonacci() func() int { cur, next := 1, 0 return func() int { cur, next = next, cur+next return cur } } func main() { f := fibonacci() for i := 0; i &lt; 10; i++ { fmt.
+        So I&rsquo;ve been distro hopping for the past couple of weeks, and I always googled how to format my boot drive and then write an ISO to my flash drive as bootable (boot-able, I&rsquo;m getting a wrong spelling indicator with the &ldquo;bootable&rdquo; word XD) USB drive. Since I did that very frequently lately, I thought of just adding a blog post that would serve as my notes/reminder.
+Formatting Boot-able USB You won&rsquo;t be able to detect a boot-able flash drive in Linux (ie.
         
-        <a class="button is-link" href="http://blog.danielcefram.com/blog/learning-go-fourth-exercise/" style="height:28px">
+        <a class="button is-link" href="http://blog.danielcefram.com/blog/when-distro-hopping/" style="height:28px">
           Read more
           <span class="icon is-small">
             <i class="fa fa-angle-double-right"></i>
@@ -121,20 +119,20 @@ package main import &#34;fmt&#34; // fibonacci is a function that returns // a f
       <div class="subtitle is-6 is-pulled-right">
         
           
-<a class="tags subtitle is-6" href="/tags/golang">#Golang</a>
+<a class="tags subtitle is-6" href="/tags/javascript">#JavaScript</a>
 
 
 
         
       </div>
-      <h2 class="subtitle is-6">July 22, 2017</h2>
-      <h1 class="title"><a href="http://blog.danielcefram.com/blog/learning-go-third-exercise/">Learning Go: Third Exercise</a></h1>
+      <h2 class="subtitle is-6">March 25, 2017</h2>
+      <h1 class="title"><a href="http://blog.danielcefram.com/blog/looping-in-successive-order-with-async-calls/">Looping in successive order with Async calls</a></h1>
       <div class="content">
-        The third exercise is all about maps. We&rsquo;ll need to count the number of times a word has occurred in a sentence.
-Here&rsquo;s the link: https://tour.golang.org/moretypes/23
-package main import ( &#34;golang.org/x/tour/wc&#34; &#34;strings&#34; ) func WordCount(s string) map[string]int { words := strings.Fields(s) result := make(map[string]int) for _, word := range words { result[word]++ } return result } func main() { wc.Test(WordCount) } Since if the key is not present in the map, its value is always 0 instead of undefined.
+        Let&rsquo;s first define an example problem to better understand the issue we have with normal looping:
+For example, we have an array of post IDs that we would fetch and then print it out on the console
+const ids = [1, 2, 3, 4]; for (var id of ids) { fetch(`${API_URL}/${id}`).then(() =&gt; { console.log(id, response.results); }); }  The output of the above code would be different results with the same id, wherein the id printed would be the last number
         
-        <a class="button is-link" href="http://blog.danielcefram.com/blog/learning-go-third-exercise/" style="height:28px">
+        <a class="button is-link" href="http://blog.danielcefram.com/blog/looping-in-successive-order-with-async-calls/" style="height:28px">
           Read more
           <span class="icon is-small">
             <i class="fa fa-angle-double-right"></i>
@@ -148,20 +146,19 @@ package main import ( &#34;golang.org/x/tour/wc&#34; &#34;strings&#34; ) func Wo
       <div class="subtitle is-6 is-pulled-right">
         
           
-<a class="tags subtitle is-6" href="/tags/golang">#Golang</a>
+<a class="tags subtitle is-6" href="/tags/webpack">#Webpack</a>
 
 
 
         
       </div>
-      <h2 class="subtitle is-6">July 21, 2017</h2>
-      <h1 class="title"><a href="http://blog.danielcefram.com/blog/learning-go-second-exercise/">Learning Go: Second Exercise</a></h1>
+      <h2 class="subtitle is-6">March 18, 2017</h2>
+      <h1 class="title"><a href="http://blog.danielcefram.com/blog/easily-turn-your-app-to-progressive-web-apps-through-webpack-plugins/">Easily turn your app to Progressive Web Apps through webpack plugins</a></h1>
       <div class="content">
-        Today&rsquo;s exercise is all about slices. We&rsquo;ll need to generate an image by passing a slice of slices to pic.Show.
-Here&rsquo;s the link: https://tour.golang.org/moretypes/18
-package main import &#34;golang.org/x/tour/pic&#34; func Pic(dx, dy int) [][]uint8 { slice := make([][]uint8, dy) for fIndex := range slice { slice[fIndex] = make([]uint8, dx) for sIndex := range slice[fIndex] { slice[fIndex][sIndex] = uint8(fIndex ^ sIndex) } } return slice } func main() { pic.Show(Pic) } Quite simple&hellip; I did learn something new too.
+        If ever we wanted our WebApp available even if the user does not have any internet connection, we would need to use service workers. But the thing with service workers is that they&rsquo;re not &ldquo;easy&rdquo; to implement. It&rsquo;s a good thing though that the GoogleChrome team released a node module that would generate the service worker code for your project: sw-precache.
+You can use that node module in your gulp file when building/bundling your app.
         
-        <a class="button is-link" href="http://blog.danielcefram.com/blog/learning-go-second-exercise/" style="height:28px">
+        <a class="button is-link" href="http://blog.danielcefram.com/blog/easily-turn-your-app-to-progressive-web-apps-through-webpack-plugins/" style="height:28px">
           Read more
           <span class="icon is-small">
             <i class="fa fa-angle-double-right"></i>
@@ -175,19 +172,23 @@ package main import &#34;golang.org/x/tour/pic&#34; func Pic(dx, dy int) [][]uin
       <div class="subtitle is-6 is-pulled-right">
         
           
-<a class="tags subtitle is-6" href="/tags/golang">#Golang</a>
+<a class="tags subtitle is-6" href="/tags/javascript">#JavaScript</a>
 
 
+
+  
+  | <a class="tags subtitle is-6" href="/tags/css">#CSS</a>
+  
 
         
       </div>
-      <h2 class="subtitle is-6">July 20, 2017</h2>
-      <h1 class="title"><a href="http://blog.danielcefram.com/blog/learning-go-first-excersise/">Learning Go: First Exercise</a></h1>
+      <h2 class="subtitle is-6">March 4, 2017</h2>
+      <h1 class="title"><a href="http://blog.danielcefram.com/blog/responsive-web-designs-through-eqcss/">Responsive web designs through EQCSS</a></h1>
       <div class="content">
-        I decided to blog my self study adventures in learning Go. I&rsquo;ll start with A Tour of Go&rsquo;s exercises and then follow through my own personal small project, probably a blogging platform that reads markdown files.
-I already did this, and have my go-learn self study codes in github, but I decided to do all of the exercises again after a couple of months not using Go since I was studying Rust.
+        EQCSS allows us to style elements based on the element&rsquo;s state. It is similar to CSS&rsquo; media queries, but with the added feature to style elements based on the element&rsquo;s dimension and contents, and not just based on the browser&rsquo;s width and height.
+This got me interested since my previous project&rsquo;s longstanding issue was with how the app should look like based on a combination of two factors: The window&rsquo;s size and the number of elements inside the container.
         
-        <a class="button is-link" href="http://blog.danielcefram.com/blog/learning-go-first-excersise/" style="height:28px">
+        <a class="button is-link" href="http://blog.danielcefram.com/blog/responsive-web-designs-through-eqcss/" style="height:28px">
           Read more
           <span class="icon is-small">
             <i class="fa fa-angle-double-right"></i>

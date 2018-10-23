@@ -43,15 +43,5 @@ Install Reflector This is so that we would use the fastest server in our mirrorl
 Formatting Boot-able USB You won&amp;rsquo;t be able to detect a boot-able flash drive in Linux (ie.</description>
     </item>
     
-    <item>
-      <title>Why I switched to Visual Studio Code</title>
-      <link>http://blog.danielcefram.com/blog/why-i-switched-to-visual-studio-code/</link>
-      <pubDate>Fri, 10 Mar 2017 18:18:14 +0000</pubDate>
-      
-      <guid>http://blog.danielcefram.com/blog/why-i-switched-to-visual-studio-code/</guid>
-      <description>I used to be a Sublime Text user, and used to always go back to Sublime after trying out other editors. I actually bought a license for $70 even though I could do away without it. I bought it to encourage the developers to keep on improving Sublime.
-But Sublime&amp;rsquo;s development seems to be slow, but at least it is stable. The only caveat is that some of the plugins isn&amp;rsquo;t working as intended (ie.</description>
-    </item>
-    
   </channel>
 </rss>
