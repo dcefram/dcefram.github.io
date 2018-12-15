@@ -13,11 +13,11 @@
     
     
     <item>
-      <title>Stuffs that I dislike about Go</title>
-      <link>http://blog.danielcefram.com/blog/stuffs-that-i-dislike-about-go/</link>
+      <title>What I dislike in Go</title>
+      <link>http://blog.danielcefram.com/blog/what-i-dislike-in-go/</link>
       <pubDate>Sat, 04 Nov 2017 21:31:38 +0800</pubDate>
       
-      <guid>http://blog.danielcefram.com/blog/stuffs-that-i-dislike-about-go/</guid>
+      <guid>http://blog.danielcefram.com/blog/what-i-dislike-in-go/</guid>
       <description>Error handling I should admit that I used to like Go&amp;rsquo;s idea of error handling, wherein errors are treated as values. I also thought that forcing developers to handle each possible error points immediately was a good thing, rather than moving all of the code into a try catch block.
 But recently, while working on one of our project&amp;rsquo;s internal tools, I came to grow tired of Go&amp;rsquo;s error handling.</description>
     </item>
