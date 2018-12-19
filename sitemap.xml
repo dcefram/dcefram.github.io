@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.danielcefram.com/blog/kahitsaan-random-restaurants/</loc>
+    <lastmod>2018-12-19T09:12:14+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.danielcefram.com/blog/image-resizing-cli/</loc>
     <lastmod>2018-09-18T09:31:25+08:00</lastmod>
   </url>
@@ -69,13 +74,13 @@
   
   <url>
     <loc>https://blog.danielcefram.com/</loc>
-    <lastmod>2018-09-18T09:31:25+08:00</lastmod>
+    <lastmod>2018-12-19T09:12:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.danielcefram.com/blog/</loc>
-    <lastmod>2018-09-18T09:31:25+08:00</lastmod>
+    <lastmod>2018-12-19T09:12:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
