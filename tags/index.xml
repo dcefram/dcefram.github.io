@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://danielcefram.com&#34;&gt;Daniel Cefram&lt;/a&gt; 2018</copyright>
-    <lastBuildDate>Wed, 19 Dec 2018 09:12:14 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 26 Dec 2018 17:12:27 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.danielcefram.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Co Working</title>
+      <link>https://blog.danielcefram.com/tags/co-working/</link>
+      <pubDate>Wed, 26 Dec 2018 17:12:27 +0800</pubDate>
+      
+      <guid>https://blog.danielcefram.com/tags/co-working/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Crystal</title>
@@ -54,6 +63,15 @@
       <pubDate>Wed, 13 Sep 2017 00:34:15 +0800</pubDate>
       
       <guid>https://blog.danielcefram.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Life</title>
+      <link>https://blog.danielcefram.com/tags/life/</link>
+      <pubDate>Wed, 26 Dec 2018 17:12:27 +0800</pubDate>
+      
+      <guid>https://blog.danielcefram.com/tags/life/</guid>
       <description></description>
     </item>
     
