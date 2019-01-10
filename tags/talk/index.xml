@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talk on /dump</title>
+    <link>https://blog.danielcefram.com/tags/talk/</link>
+    <description>Recent content in Talk on /dump</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://danielcefram.com&#34;&gt;Daniel Cefram&lt;/a&gt; 2018</copyright>
+    <lastBuildDate>Wed, 23 May 2018 14:05:09 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.danielcefram.com/tags/talk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JavaScript for Desktop - Talk in FEU</title>
+      <link>https://blog.danielcefram.com/blog/js-for-desktop-talk/</link>
+      <pubDate>Wed, 23 May 2018 14:05:09 +0800</pubDate>
+      
+      <guid>https://blog.danielcefram.com/blog/js-for-desktop-talk/</guid>
+      <description>Yesterday, I had the priviledge to give a talk at FEU Institute of Technology about using web technologies to create desktop applications. For the past few years, I&amp;rsquo;ve been working on a desktop application wherein the UI component is basically a browser. The experiences I accumulated with this project made me want to share my rants and lessons learned while leading the project, which I then turned into a talk.</description>
+    </item>
+    
+  </channel>
+</rss>
