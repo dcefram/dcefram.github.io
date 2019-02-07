@@ -14,10 +14,10 @@
     
     <item>
       <title>Responsive web designs through EQCSS</title>
-      <link>https://blog.danielcefram.com/blog/responsive-web-designs-through-eqcss/</link>
+      <link>https://blog.danielcefram.com/responsive-web-designs-through-eqcss/</link>
       <pubDate>Sat, 04 Mar 2017 08:13:23 +0000</pubDate>
       
-      <guid>https://blog.danielcefram.com/blog/responsive-web-designs-through-eqcss/</guid>
+      <guid>https://blog.danielcefram.com/responsive-web-designs-through-eqcss/</guid>
       <description>EQCSS allows us to style elements based on the element&amp;rsquo;s state. It is similar to CSS&amp;rsquo; media queries, but with the added feature to style elements based on the element&amp;rsquo;s dimension and contents, and not just based on the browser&amp;rsquo;s width and height.
 This got me interested since my previous project&amp;rsquo;s longstanding issue was with how the app should look like based on a combination of two factors: The window&amp;rsquo;s size and the number of elements inside the container.</description>
     </item>

@@ -14,10 +14,10 @@
     
     <item>
       <title>Easily turn your app to Progressive Web Apps through webpack plugins</title>
-      <link>https://blog.danielcefram.com/blog/easily-turn-your-app-to-progressive-web-apps-through-webpack-plugins/</link>
+      <link>https://blog.danielcefram.com/easily-turn-your-app-to-progressive-web-apps-through-webpack-plugins/</link>
       <pubDate>Sat, 18 Mar 2017 03:26:00 +0000</pubDate>
       
-      <guid>https://blog.danielcefram.com/blog/easily-turn-your-app-to-progressive-web-apps-through-webpack-plugins/</guid>
+      <guid>https://blog.danielcefram.com/easily-turn-your-app-to-progressive-web-apps-through-webpack-plugins/</guid>
       <description>If ever we wanted our WebApp available even if the user does not have any internet connection, we would need to use service workers. But the thing with service workers is that they&amp;rsquo;re not &amp;ldquo;easy&amp;rdquo; to implement. It&amp;rsquo;s a good thing though that the GoogleChrome team released a node module that would generate the service worker code for your project: sw-precache.
 You can use that node module in your gulp file when building/bundling your app.</description>
     </item>

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.47.1" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>Daniel Cefram&#39;s dump file</title>
+<title>Using JSON parse and stringify to clone objects | /dump</title>
 
 
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
@@ -75,94 +74,109 @@
 
 <section class="section">
   <div class="container">
-    
-    <article>
-      <div class="subtitle is-6 is-pulled-right">
-        
-          
-<a class="tags subtitle is-6" href="/tags/react">#React</a>
+    <div class="subtitle is-6 is-pulled-right">
+      
+      
+<a class="tags subtitle is-6" href="/tags/javascript">#JavaScript</a>
 
 
 
-  
-  | <a class="tags subtitle is-6" href="/tags/javascript">#JavaScript</a>
-  
+      
+    </div>
+    <h2 class="subtitle is-6">February 25, 2017</h2>
+    <h1 class="title">Using JSON parse and stringify to clone objects</h1>
+      
+    <div class="content">
+      <p><a href="http://stackoverflow.com/a/34385684" target="_blank">Immutability is important</a>. The stackoverflow article that I just linked would explain why immutability is important.</p>
 
-        
-      </div>
-      <h2 class="subtitle is-6">February 18, 2017</h2>
-      <h1 class="title"><a href="https://blog.danielcefram.com/using-datasets-to-avoid-inline-arrow-functions/">Using datasets to avoid inline arrow functions</a></h1>
-      <div class="content">
-        Adding an inline anonymous/arrow function in React is not recommended due to the nature of how react behaves. The render method would always be called each time a state or property is updated, which would then create a new function if we are using inline arrow functions, and then this would force the GC (garbage collector) to clean the previous arrow function.
-render() { // Not good :\  return &lt;div onClick={e =&gt; console.
-        
-        <a class="button is-link" href="https://blog.danielcefram.com/using-datasets-to-avoid-inline-arrow-functions/" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
-        </a>
-        
-      </div>
-    </article>
-    
-    <article>
-      <div class="subtitle is-6 is-pulled-right">
-        
-          
-<a class="tags subtitle is-6" href="/tags/personal">#Personal</a>
+<p>I am accustomed to using Immutable.js at work, but when I came across an ancient project that didn&rsquo;t make sense to add a new library just for using immutable objects, I had to resort to <code>Object.assign</code>.</p>
 
+<p>But the problem with <code>Object.assign</code> though is that you cannot use it to modify deep properties.</p>
 
+<p>Take this for example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">node</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+    <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;The quick brown fox&#39;</span>,
+    <span style="color:#a6e22e">image</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">original</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;//some.url/to/original/image&#39;</span>,
+      <span style="color:#a6e22e">cached</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;//some.url/to/cached/image&#39;</span>
+    }
+  }
+};
 
-        
-      </div>
-      <h2 class="subtitle is-6">January 1, 2017</h2>
-      <h1 class="title"><a href="https://blog.danielcefram.com/a-new-start/">A New Start</a></h1>
-      <div class="content">
-        I decided to restart my blog yet again, and this time I&rsquo;m planning to just document my thoughts at least every month. I&rsquo;m looking forward to getting this goal done, specially with the fact that I&rsquo;m getting married in 2~3 weeks time!&hellip; Which means that I might actually have more things to write about :D
-A lot has happened since last year. I clocked a lot of extra hours of work, for the preparation of my wedding.
-        
-        <a class="button is-link" href="https://blog.danielcefram.com/a-new-start/" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
-        </a>
-        
-      </div>
-    </article>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">updatedObj</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">assign</span>(
+  {},
+  <span style="color:#a6e22e">obj</span>,
+  {
+    <span style="color:#a6e22e">node</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;The quickest brown fox&#39;</span> }
+  }
+);
+</code></pre></div>
+<p>What we wanted was to update the title property of the node, but what we got was an object that only has <code>{ node : { title: 'The quickest brown fox' } }</code>. We failed to get all other properties of <code>obj</code>.</p>
+
+<p>A workaround is to not pass <code>{ node : { title: 'The quickest brown fox' } }</code> in <code>Object.assign</code>&rsquo;s last parameter, but rather do that only after the <code>Object.assign</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">node</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+    <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;The quick brown fox&#39;</span>,
+    <span style="color:#a6e22e">image</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">original</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;//some.url/to/original/image&#39;</span>,
+      <span style="color:#a6e22e">cached</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;//some.url/to/cached/image&#39;</span>
+    }
+  }
+};
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">updatedObj</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">assign</span>({}, <span style="color:#a6e22e">obj</span>);
+<span style="color:#a6e22e">updateObj</span>.<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;The quickest brown fox&#39;</span>;
+</code></pre></div>
+<p>Another workaround is to use JSON.stringify and JSON.parse to clone the object, and then update the property in a mutable way:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">node</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+    <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;The quick brown fox&#39;</span>,
+    <span style="color:#a6e22e">image</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">original</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;\//some.url/to/original/image&#39;</span>,
+      <span style="color:#a6e22e">cached</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;\//some.url/to/cached/image&#39;</span>
+    }
+  }
+};
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">updatedObj</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">obj</span>));
+<span style="color:#a6e22e">updateObj</span>.<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;The quickest brown fox&#39;</span>;
+</code></pre></div>
+<p>With this, <code>updatedObj</code> got all the properties of <code>obj</code>, but with the updated title, while not mutating <code>obj</code>.</p>
+
+<p>Now now, surely there should have some performance hit with using <code>JSON.parse(JSON.stringify(var))</code> compared to using <code>Object.assign()</code> right?</p>
+
+<p>That&rsquo;s what I thought, and was surprised when I tried testing it out in <a href="https://jsperf.com/json-parse-perf/1" target="_blank">jsperf</a>.</p>
+
+<p>In chrome, <code>JSON.parse</code> with <code>JSON.stringify</code> does get slower the larger the object, but it is interesting to see that cloning a 256 wide array is faster when using <code>JSON.parse</code> and <code>JSON.stringify</code> compared to <code>Object.assign</code>.</p>
+
+<p>Run that test in firefox, and you&rsquo;ll see that <code>Object.assign</code> is slower regardless of the size of the array.</p>
+
+<p>That was interesting to see, which is why I wrote it in my blog.</p>
+
+    </div>
     
   </div>
 </section>
+
 <section class="section">
   <div class="container">
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <div class="level-item">
-          
-          <a class="button" href="/page/3/">
-            <span class="page-icon left-icon is-small is-marginless">
-              <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-    
-    <line x1="20" y1="12" x2="4" y2="12"/>
-    <polyline points="10 18 4 12 10 6"/>
-    
-  </svg>
-
-            </span>
-            Newer
-          </a>
-          
-        </div>
-      </div>
-      <div class="level-right is-marginless">
-        <div class="level-item">
-          
-        </div>
-      </div>
-    </nav>
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'dcefram';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   </div>
 </section>
+
 
 <section class="section">
   <div class="container has-text-centered">
@@ -186,4 +200,3 @@ if (!doNotTrack) {
 
 </body>
 </html>
-

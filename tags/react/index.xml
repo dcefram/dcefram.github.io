@@ -14,10 +14,10 @@
     
     <item>
       <title>Alternative to dangerously set inner html in React</title>
-      <link>https://blog.danielcefram.com/blog/alternative-to-dangerouslysetinnerhtml/</link>
+      <link>https://blog.danielcefram.com/alternative-to-dangerously-set-inner-html-in-react/</link>
       <pubDate>Wed, 13 Sep 2017 00:34:15 +0800</pubDate>
       
-      <guid>https://blog.danielcefram.com/blog/alternative-to-dangerouslysetinnerhtml/</guid>
+      <guid>https://blog.danielcefram.com/alternative-to-dangerously-set-inner-html-in-react/</guid>
       <description>Scenarios wherein you need to render a string with html tags in it would still require you to use dangerouslySetInnerHTML&amp;hellip; so if your problem is as such, then I guess there&amp;rsquo;s still no better way to parse strings with html tags.
 As for scenarios wherein we would need to pass a content to a reusable component through attributes, then this would work. A simple example might help right?
 The scenario In this example, we&amp;rsquo;ll be using ReactTooltip as our reusable component.</description>
@@ -25,10 +25,10 @@ The scenario In this example, we&amp;rsquo;ll be using ReactTooltip as our reusa
     
     <item>
       <title>Using datasets to avoid inline arrow functions</title>
-      <link>https://blog.danielcefram.com/blog/using-datasets-to-avoid-inline-arrow-functions/</link>
+      <link>https://blog.danielcefram.com/using-datasets-to-avoid-inline-arrow-functions/</link>
       <pubDate>Sat, 18 Feb 2017 08:10:44 +0000</pubDate>
       
-      <guid>https://blog.danielcefram.com/blog/using-datasets-to-avoid-inline-arrow-functions/</guid>
+      <guid>https://blog.danielcefram.com/using-datasets-to-avoid-inline-arrow-functions/</guid>
       <description>Adding an inline anonymous/arrow function in React is not recommended due to the nature of how react behaves. The render method would always be called each time a state or property is updated, which would then create a new function if we are using inline arrow functions, and then this would force the GC (garbage collector) to clean the previous arrow function.
 render() { // Not good :\  return &amp;lt;div onClick={e =&amp;gt; console.</description>
     </item>

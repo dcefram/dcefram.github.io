@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.47.1" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>Daniel Cefram&#39;s dump file</title>
+<title>Installing Sublime in OpenSUSE | /dump</title>
 
 
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
@@ -75,94 +74,92 @@
 
 <section class="section">
   <div class="container">
+    <div class="subtitle is-6 is-pulled-right">
+      
+      
+<a class="tags subtitle is-6" href="/tags/geek-ism">#Geek-ism</a>
+
+
+
+      
+    </div>
+    <h2 class="subtitle is-6">September 16, 2017</h2>
+    <h1 class="title">Installing Sublime in OpenSUSE</h1>
+      
+    <div class="content">
+      
+
+<p>My daily driver nowadays is 
+
     
-    <article>
-      <div class="subtitle is-6 is-pulled-right">
         
-          
-<a class="tags subtitle is-6" href="/tags/react">#React</a>
-
-
-
-  
-  | <a class="tags subtitle is-6" href="/tags/javascript">#JavaScript</a>
-  
-
-        
-      </div>
-      <h2 class="subtitle is-6">February 18, 2017</h2>
-      <h1 class="title"><a href="https://blog.danielcefram.com/using-datasets-to-avoid-inline-arrow-functions/">Using datasets to avoid inline arrow functions</a></h1>
-      <div class="content">
-        Adding an inline anonymous/arrow function in React is not recommended due to the nature of how react behaves. The render method would always be called each time a state or property is updated, which would then create a new function if we are using inline arrow functions, and then this would force the GC (garbage collector) to clean the previous arrow function.
-render() { // Not good :\  return &lt;div onClick={e =&gt; console.
-        
-        <a class="button is-link" href="https://blog.danielcefram.com/using-datasets-to-avoid-inline-arrow-functions/" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
-        </a>
-        
-      </div>
-    </article>
     
-    <article>
-      <div class="subtitle is-6 is-pulled-right">
-        
-          
-<a class="tags subtitle is-6" href="/tags/personal">#Personal</a>
 
+    <a href="https://www.jetbrains.com/go" target='blank'>Gogland</a>
 
+,
+and I sometimes use 
 
+    
         
-      </div>
-      <h2 class="subtitle is-6">January 1, 2017</h2>
-      <h1 class="title"><a href="https://blog.danielcefram.com/a-new-start/">A New Start</a></h1>
-      <div class="content">
-        I decided to restart my blog yet again, and this time I&rsquo;m planning to just document my thoughts at least every month. I&rsquo;m looking forward to getting this goal done, specially with the fact that I&rsquo;m getting married in 2~3 weeks time!&hellip; Which means that I might actually have more things to write about :D
-A lot has happened since last year. I clocked a lot of extra hours of work, for the preparation of my wedding.
+    
+
+    <a href="https://code.visualstudio.com/" target='blank'>VSCode</a>
+
+ if ever I
+need to open 2 or more projects at the same time (Gogland eats up way too much RAM).</p>
+
+<p>In my previous post, I stated that I switched to VSCode away from Sublime, but since Gogland got
+better JS support, like configuring the root path so that it would match how my webpack config
+handles import paths, and with the fact that Gogland got better tooling when it came to coding in
+Go Language, I&rsquo;m now using it as my primary editor.</p>
+
+<p>But a day or two ago, Sublime Text announced that they just released Sublime Text 3 out of Beta.
+I wanted to test it out in my OpenSUSE laptop since I paid for a Sublime Text license, and would wanted
+to encourage myself that I didn&rsquo;t just waste 70 dollars on a product that got outdated pretty quickly after
+VSCode came out. But alas, zypper does not have the latest and greatest Sublime Text 3 :(</p>
+
+<p>So here are my notes on how to install Sublime Text 3, the manual way&hellip; Since sublime does release
+tarballs for Linux, we&rsquo;ll go ahead and use that.</p>
+
+<h3 id="steps">Steps</h3>
+
+<ul>
+<li>Download the tarball from 
+
+    
         
-        <a class="button is-link" href="https://blog.danielcefram.com/a-new-start/" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
-        </a>
-        
-      </div>
-    </article>
+    
+
+    <a href="https://www.sublimetext.com/3" target='blank'>Sublime&#39;s website</a>
+
+</li>
+<li>Extract it to <code>/opt</code>: <code>tar vxjf sublime_text_3_build_3143_x64.tar.bz2 -C /opt/</code></li>
+<li>Link it so that it would be available through command line: <code>ln -s /opt/sublime_text_3/sublime_text /usr/bin/subl</code></li>
+</ul>
+
+<p>You can open sublime through the terminal using <code>subl</code> keyword.</p>
+
+    </div>
     
   </div>
 </section>
+
 <section class="section">
   <div class="container">
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <div class="level-item">
-          
-          <a class="button" href="/page/3/">
-            <span class="page-icon left-icon is-small is-marginless">
-              <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-    
-    <line x1="20" y1="12" x2="4" y2="12"/>
-    <polyline points="10 18 4 12 10 6"/>
-    
-  </svg>
-
-            </span>
-            Newer
-          </a>
-          
-        </div>
-      </div>
-      <div class="level-right is-marginless">
-        <div class="level-item">
-          
-        </div>
-      </div>
-    </nav>
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'dcefram';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   </div>
 </section>
+
 
 <section class="section">
   <div class="container has-text-centered">
@@ -186,4 +183,3 @@ if (!doNotTrack) {
 
 </body>
 </html>
-

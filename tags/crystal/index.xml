@@ -14,10 +14,10 @@
     
     <item>
       <title>Kahitsaan Random Restaurants</title>
-      <link>https://blog.danielcefram.com/blog/kahitsaan-random-restaurants/</link>
+      <link>https://blog.danielcefram.com/kahitsaan-random-restaurants/</link>
       <pubDate>Wed, 19 Dec 2018 09:12:14 +0800</pubDate>
       
-      <guid>https://blog.danielcefram.com/blog/kahitsaan-random-restaurants/</guid>
+      <guid>https://blog.danielcefram.com/kahitsaan-random-restaurants/</guid>
       <description>So I made a tool and I thought of blogging about it.
 Background I recently left SplitmediaLabs, and now I&amp;rsquo;m working remotely as a Senior Software Developer/Engineer for a consultancy (aside: contract says that I&amp;rsquo;m a Senior Software Engineer, but my company ID states that I&amp;rsquo;m a Senior Software &amp;ldquo;Developer&amp;rdquo;. Minor stuff, it&amp;rsquo;s just that I hate inconsistencies).
 Although I&amp;rsquo;m working remotely, I usually meetup with the team at a co-working space once a week&amp;hellip; And during those meetups, we always have a dilemma of picking a place to eat within the vicinity of the co-working space.</description>
@@ -25,10 +25,10 @@ Although I&amp;rsquo;m working remotely, I usually meetup with the team at a co-
     
     <item>
       <title>Image Resizing in CLI</title>
-      <link>https://blog.danielcefram.com/blog/image-resizing-cli/</link>
+      <link>https://blog.danielcefram.com/image-resizing-in-cli/</link>
       <pubDate>Tue, 18 Sep 2018 09:31:25 +0800</pubDate>
       
-      <guid>https://blog.danielcefram.com/blog/image-resizing-cli/</guid>
+      <guid>https://blog.danielcefram.com/image-resizing-in-cli/</guid>
       <description>For the past few weeks, I was looking for a new compiled language that I can make use of for my tools as I grew tired of Go language&amp;rsquo;s verbosity. I tried learning Rust, but as I expected, it was more suited for system projects, and found out how much pain it could be for smaller tools due to how strict the compiler is.
 With that, I eyed for both Nim and Crystal language, with the latter prevailing as my language of choice for my personal tools.</description>
     </item>

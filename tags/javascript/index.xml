@@ -14,19 +14,19 @@
     
     <item>
       <title>JavaScript for Desktop - Talk in FEU</title>
-      <link>https://blog.danielcefram.com/blog/js-for-desktop-talk/</link>
+      <link>https://blog.danielcefram.com/javascript-for-desktop---talk-in-feu/</link>
       <pubDate>Wed, 23 May 2018 14:05:09 +0800</pubDate>
       
-      <guid>https://blog.danielcefram.com/blog/js-for-desktop-talk/</guid>
+      <guid>https://blog.danielcefram.com/javascript-for-desktop---talk-in-feu/</guid>
       <description>Yesterday, I had the priviledge to give a talk at FEU Institute of Technology about using web technologies to create desktop applications. For the past few years, I&amp;rsquo;ve been working on a desktop application wherein the UI component is basically a browser. The experiences I accumulated with this project made me want to share my rants and lessons learned while leading the project, which I then turned into a talk.</description>
     </item>
     
     <item>
       <title>Alternative to dangerously set inner html in React</title>
-      <link>https://blog.danielcefram.com/blog/alternative-to-dangerouslysetinnerhtml/</link>
+      <link>https://blog.danielcefram.com/alternative-to-dangerously-set-inner-html-in-react/</link>
       <pubDate>Wed, 13 Sep 2017 00:34:15 +0800</pubDate>
       
-      <guid>https://blog.danielcefram.com/blog/alternative-to-dangerouslysetinnerhtml/</guid>
+      <guid>https://blog.danielcefram.com/alternative-to-dangerously-set-inner-html-in-react/</guid>
       <description>Scenarios wherein you need to render a string with html tags in it would still require you to use dangerouslySetInnerHTML&amp;hellip; so if your problem is as such, then I guess there&amp;rsquo;s still no better way to parse strings with html tags.
 As for scenarios wherein we would need to pass a content to a reusable component through attributes, then this would work. A simple example might help right?
 The scenario In this example, we&amp;rsquo;ll be using ReactTooltip as our reusable component.</description>
@@ -34,10 +34,10 @@ The scenario In this example, we&amp;rsquo;ll be using ReactTooltip as our reusa
     
     <item>
       <title>Looping in successive order with Async calls</title>
-      <link>https://blog.danielcefram.com/blog/looping-in-successive-order-with-async-calls/</link>
+      <link>https://blog.danielcefram.com/looping-in-successive-order-with-async-calls/</link>
       <pubDate>Sat, 25 Mar 2017 07:38:14 +0000</pubDate>
       
-      <guid>https://blog.danielcefram.com/blog/looping-in-successive-order-with-async-calls/</guid>
+      <guid>https://blog.danielcefram.com/looping-in-successive-order-with-async-calls/</guid>
       <description>Let&amp;rsquo;s first define an example problem to better understand the issue we have with normal looping:
 For example, we have an array of post IDs that we would fetch and then print it out on the console
 const ids = [1, 2, 3, 4]; for (var id of ids) { fetch(`${API_URL}/${id}`).then(() =&amp;gt; { console.log(id, response.results); }); }  The output of the above code would be different results with the same id, wherein the id printed would be the last number</description>
@@ -45,20 +45,20 @@ const ids = [1, 2, 3, 4]; for (var id of ids) { fetch(`${API_URL}/${id}`).then((
     
     <item>
       <title>Responsive web designs through EQCSS</title>
-      <link>https://blog.danielcefram.com/blog/responsive-web-designs-through-eqcss/</link>
+      <link>https://blog.danielcefram.com/responsive-web-designs-through-eqcss/</link>
       <pubDate>Sat, 04 Mar 2017 08:13:23 +0000</pubDate>
       
-      <guid>https://blog.danielcefram.com/blog/responsive-web-designs-through-eqcss/</guid>
+      <guid>https://blog.danielcefram.com/responsive-web-designs-through-eqcss/</guid>
       <description>EQCSS allows us to style elements based on the element&amp;rsquo;s state. It is similar to CSS&amp;rsquo; media queries, but with the added feature to style elements based on the element&amp;rsquo;s dimension and contents, and not just based on the browser&amp;rsquo;s width and height.
 This got me interested since my previous project&amp;rsquo;s longstanding issue was with how the app should look like based on a combination of two factors: The window&amp;rsquo;s size and the number of elements inside the container.</description>
     </item>
     
     <item>
       <title>Using JSON parse and stringify to clone objects</title>
-      <link>https://blog.danielcefram.com/blog/object-assign-vs-json-parse/</link>
+      <link>https://blog.danielcefram.com/using-json-parse-and-stringify-to-clone-objects/</link>
       <pubDate>Sat, 25 Feb 2017 05:50:12 +0000</pubDate>
       
-      <guid>https://blog.danielcefram.com/blog/object-assign-vs-json-parse/</guid>
+      <guid>https://blog.danielcefram.com/using-json-parse-and-stringify-to-clone-objects/</guid>
       <description>Immutability is important. The stackoverflow article that I just linked would explain why immutability is important.
 I am accustomed to using Immutable.js at work, but when I came across an ancient project that didn&amp;rsquo;t make sense to add a new library just for using immutable objects, I had to resort to Object.assign.
 But the problem with Object.assign though is that you cannot use it to modify deep properties.
@@ -67,10 +67,10 @@ Take this for example:</description>
     
     <item>
       <title>Using datasets to avoid inline arrow functions</title>
-      <link>https://blog.danielcefram.com/blog/using-datasets-to-avoid-inline-arrow-functions/</link>
+      <link>https://blog.danielcefram.com/using-datasets-to-avoid-inline-arrow-functions/</link>
       <pubDate>Sat, 18 Feb 2017 08:10:44 +0000</pubDate>
       
-      <guid>https://blog.danielcefram.com/blog/using-datasets-to-avoid-inline-arrow-functions/</guid>
+      <guid>https://blog.danielcefram.com/using-datasets-to-avoid-inline-arrow-functions/</guid>
       <description>Adding an inline anonymous/arrow function in React is not recommended due to the nature of how react behaves. The render method would always be called each time a state or property is updated, which would then create a new function if we are using inline arrow functions, and then this would force the GC (garbage collector) to clean the previous arrow function.
 render() { // Not good :\  return &amp;lt;div onClick={e =&amp;gt; console.</description>
     </item>

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.47.1" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>Daniel Cefram&#39;s dump file</title>
+<title>When distro hopping... | /dump</title>
 
 
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
@@ -75,94 +74,98 @@
 
 <section class="section">
   <div class="container">
-    
-    <article>
-      <div class="subtitle is-6 is-pulled-right">
-        
-          
-<a class="tags subtitle is-6" href="/tags/react">#React</a>
+    <div class="subtitle is-6 is-pulled-right">
+      
+      
+<a class="tags subtitle is-6" href="/tags/geek-ism">#Geek-ism</a>
 
 
 
-  
-  | <a class="tags subtitle is-6" href="/tags/javascript">#JavaScript</a>
-  
+      
+    </div>
+    <h2 class="subtitle is-6">April 24, 2017</h2>
+    <h1 class="title">When distro hopping...</h1>
+      
+    <div class="content">
+      
 
-        
-      </div>
-      <h2 class="subtitle is-6">February 18, 2017</h2>
-      <h1 class="title"><a href="https://blog.danielcefram.com/using-datasets-to-avoid-inline-arrow-functions/">Using datasets to avoid inline arrow functions</a></h1>
-      <div class="content">
-        Adding an inline anonymous/arrow function in React is not recommended due to the nature of how react behaves. The render method would always be called each time a state or property is updated, which would then create a new function if we are using inline arrow functions, and then this would force the GC (garbage collector) to clean the previous arrow function.
-render() { // Not good :\  return &lt;div onClick={e =&gt; console.
-        
-        <a class="button is-link" href="https://blog.danielcefram.com/using-datasets-to-avoid-inline-arrow-functions/" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
-        </a>
-        
-      </div>
-    </article>
-    
-    <article>
-      <div class="subtitle is-6 is-pulled-right">
-        
-          
-<a class="tags subtitle is-6" href="/tags/personal">#Personal</a>
+<p>So I&rsquo;ve been distro hopping for the past couple of weeks, and I <em>always</em> googled how to format my boot drive and then write an ISO to my flash drive as bootable (boot-able, I&rsquo;m getting a wrong spelling indicator with the &ldquo;bootable&rdquo; word XD) USB drive. Since I did that very frequently lately, I thought of just adding a blog post that would serve as my notes/reminder.</p>
 
+<h2 id="formatting-boot-able-usb">Formatting Boot-able USB</h2>
 
+<p>You won&rsquo;t be able to detect a boot-able flash drive in Linux (ie. in Nautilus or Dolphin), while in Windows, Explorer would only show a very small portion of it. My flash drive is a 16GB flash drive, but Windows Explorer only lists it as a 5.12MB drive. In order to re-use the flash drive, we&rsquo;ll be using the terminal for both Linux and Windows&hellip; Here are the steps:</p>
 
-        
-      </div>
-      <h2 class="subtitle is-6">January 1, 2017</h2>
-      <h1 class="title"><a href="https://blog.danielcefram.com/a-new-start/">A New Start</a></h1>
-      <div class="content">
-        I decided to restart my blog yet again, and this time I&rsquo;m planning to just document my thoughts at least every month. I&rsquo;m looking forward to getting this goal done, specially with the fact that I&rsquo;m getting married in 2~3 weeks time!&hellip; Which means that I might actually have more things to write about :D
-A lot has happened since last year. I clocked a lot of extra hours of work, for the preparation of my wedding.
-        
-        <a class="button is-link" href="https://blog.danielcefram.com/a-new-start/" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
-        </a>
-        
-      </div>
-    </article>
+<h4 id="in-linux">In Linux</h4>
+
+<ol>
+<li><p>Execute <code>lsblk -l</code>
+This should list all your drives, including your flash drive with the corresponding &ldquo;original&rdquo; disk space. It would usually be sd<strong>X</strong> (<strong>X</strong> here is a variable, your flash drive might be listed as <em>sda</em> or <em>sdb</em>, etc.)</p></li>
+
+<li><p>Execute <code>sudo dd if=/dev/zero of=/dev/sdX bs=4k &amp;&amp; sync</code> (replace X again)</p></li>
+
+<li><p>Execute <code>sudo fdisk /dev/sdX</code>
+Just press <code>o</code> to create a new empty DOS partition table.</p></li>
+
+<li><p>Press <code>n</code> to create a new partition. Just use the default options (ie. create a new primary partition, with the size as the whole flash drive&rsquo;s space)</p></li>
+
+<li><p>Execute <code>lsblk -l</code> again, you should see a new partition under your drive (ex. sdX1)</p></li>
+
+<li><p>Execute <code>sudo mkfs.vfat /dev/sdX1</code> (replace X) to format it, and then eject your drive :) (<code>sudo eject /dev/sdX</code>)</p></li>
+</ol>
+
+<h4 id="in-windows">In Windows</h4>
+
+<ol>
+<li><p>Execute <code>diskpart</code></p></li>
+
+<li><p>Execute <code>list disk</code>
+This should list all drives connected to your computer. Select the drive that has the same disk space as your flash drive. We will call that as <code>disk X</code> for the sake of this post.</p></li>
+
+<li><p>Execute <code>select disk X</code></p></li>
+
+<li><p>Next, execute <code>clean</code></p></li>
+
+<li><p>And then let&rsquo;s create a partition using <code>create partition primary</code>.</p></li>
+
+<li><p>Open up the explorer, navigate to your flash drive, and then Format the drive :)</p></li>
+</ol>
+
+<h2 id="creating-a-boot-able-linux-flash-drive">Creating a boot-able Linux flash drive</h2>
+
+<h4 id="in-linux-1">In Linux</h4>
+
+<ol>
+<li><p>Execute <code>lsblk -l</code> to get the correct drive name</p></li>
+
+<li><p>Then we have to write the iso to the flash drive:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># umount /dev/sdX
+</span><span style="color:#75715e"></span># dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/path/to/downloaded.iso of<span style="color:#f92672">=</span>/dev/sdX bs<span style="color:#f92672">=</span>4M status<span style="color:#f92672">=</span>progress <span style="color:#f92672">&amp;&amp;</span> sync</code></pre></div></li>
+</ol>
+
+<h4 id="in-windows-1">In Windows</h4>
+
+<p>I personally use <a href="https://rufus.akeo.ie/" target="_blank">Rufus</a>, because we would still need to download cygwin to do this in the command line. Since I&rsquo;m going to download something extra anyways, I&rsquo;d rather go for the easier route.</p>
+
+    </div>
     
   </div>
 </section>
+
 <section class="section">
   <div class="container">
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <div class="level-item">
-          
-          <a class="button" href="/page/3/">
-            <span class="page-icon left-icon is-small is-marginless">
-              <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-    
-    <line x1="20" y1="12" x2="4" y2="12"/>
-    <polyline points="10 18 4 12 10 6"/>
-    
-  </svg>
-
-            </span>
-            Newer
-          </a>
-          
-        </div>
-      </div>
-      <div class="level-right is-marginless">
-        <div class="level-item">
-          
-        </div>
-      </div>
-    </nav>
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'dcefram';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   </div>
 </section>
+
 
 <section class="section">
   <div class="container has-text-centered">
@@ -186,4 +189,3 @@ if (!doNotTrack) {
 
 </body>
 </html>
-

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.47.1" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>Daniel Cefram&#39;s dump file</title>
+<title>Kahitsaan Random Restaurants | /dump</title>
 
 
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
@@ -75,94 +74,137 @@
 
 <section class="section">
   <div class="container">
-    
-    <article>
-      <div class="subtitle is-6 is-pulled-right">
-        
-          
-<a class="tags subtitle is-6" href="/tags/react">#React</a>
+    <div class="subtitle is-6 is-pulled-right">
+      
+      
+<a class="tags subtitle is-6" href="/tags/crystal">#crystal</a>
 
 
 
   
-  | <a class="tags subtitle is-6" href="/tags/javascript">#JavaScript</a>
+  | <a class="tags subtitle is-6" href="/tags/tools">#tools</a>
   
 
-        
-      </div>
-      <h2 class="subtitle is-6">February 18, 2017</h2>
-      <h1 class="title"><a href="https://blog.danielcefram.com/using-datasets-to-avoid-inline-arrow-functions/">Using datasets to avoid inline arrow functions</a></h1>
-      <div class="content">
-        Adding an inline anonymous/arrow function in React is not recommended due to the nature of how react behaves. The render method would always be called each time a state or property is updated, which would then create a new function if we are using inline arrow functions, and then this would force the GC (garbage collector) to clean the previous arrow function.
-render() { // Not good :\  return &lt;div onClick={e =&gt; console.
-        
-        <a class="button is-link" href="https://blog.danielcefram.com/using-datasets-to-avoid-inline-arrow-functions/" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
-        </a>
-        
-      </div>
-    </article>
+      
+    </div>
+    <h2 class="subtitle is-6">December 19, 2018</h2>
+    <h1 class="title">Kahitsaan Random Restaurants</h1>
+      
+    <div class="content">
+      
+
+<p>So I made a tool and I thought of blogging about it.</p>
+
+<h3 id="background">Background</h3>
+
+<p>I recently left <a href="https://www.splitmedialabs.com" target="_blank">SplitmediaLabs</a>, and now I&rsquo;m working remotely as a Senior Software Developer/Engineer for a consultancy (aside: contract says that I&rsquo;m a Senior Software Engineer, but my company ID states that I&rsquo;m a Senior Software &ldquo;Developer&rdquo;. Minor stuff, it&rsquo;s just that I hate inconsistencies).</p>
+
+<p>Although I&rsquo;m working remotely, I usually meetup with the team at a co-working space once a week&hellip;
+And during those meetups, we always have a dilemma of picking a place to eat within the vicinity of the co-working space.</p>
+
+<p>Here&rsquo;s the usual conversation that we have: (I&rsquo;m paraphrasing here, adding some words here and there)</p>
+
+<pre><code>Colleague: Gutom na ako, saan tayo kakaen? (I'm hungry, where should we eat?)
+Me: Kahit saan (Anywhere)
+Colleague: Pambihira, walang resto na Kahit Saan ang pangalan dito (OMGWTH, there's no resto named &quot;Anywhere&quot; around here)
+Me: Ikaw gutom, ikaw magisip (You're the one that is hungry, so you should pick where to eat)
+Colleague: Wag nalang tayo kumaen (Let's diet :P)
+</code></pre>
+
+<h3 id="the-solution-and-the-idea">The Solution and the idea</h3>
+
+<p>Create a tool that would retrieve a list of Restaurants around the vicinity, and pick one at random.
+I was thinking of creating a web app for this, but I decided to take advantage of this to play around <a href="https://crystal-lang.org" target="_blank">Crystal</a>.</p>
+
+<p>Oh, and use an existing platform&rsquo;s API rather than creating a new one that would then turn into a
+startup that would compete with other well established platforms&hellip; In other words: Use Zomato&rsquo;s API.</p>
+
+<blockquote>
+<p>P.S. I&rsquo;m not a Ruby developer, but I&rsquo;m pretty attracted with how easy it is to dive into Crystal language compared to the
+other compiled language that I&rsquo;m also self-studying (<a href="https://nim-lang.org" target="_blank">Nim</a>)&hellip; So my code might not be idiomatic
+&ldquo;Ruby&rdquo;/Crystal since I only learned how to write Crystal through the official docs. But I&rsquo;d love to learn, please send me
+feedback and/or links to good books.</p>
+</blockquote>
+
+<h3 id="implementation">Implementation</h3>
+
+<p>Here&rsquo;s the <a href="https://github.com/dcefram/kahitsaan" target="_blank">source code</a>.</p>
+
+<p>Implementing this was quite easy, since even though Crystal language itself isn&rsquo;t 1.0, and is far from &ldquo;polished&rdquo;, a lot of the tools built for Crystal had the &ldquo;polished&rdquo; feeling. I guess it&rsquo;s because most of the tools were inspired from their Ruby counterpart.</p>
+
+<p>One of the libraries that has a &ldquo;polished&rdquo; feel is <a href="https://github.com/mamantoha/crest" target="_blank">Crest</a>, which I used to send requests to Zomato&rsquo;s API. Everything was a breeze tbh. I thought of caching the results so that I won&rsquo;t have to request the API all the time to speed up the response of the CLI tool, but alas, the terms and condition of Zomato&rsquo;s API specifically indicated that caching is not allowed. :sadface:</p>
+
+<p>Here&rsquo;s a GIF of the CLI tool:</p>
+
+
+
+
     
-    <article>
-      <div class="subtitle is-6 is-pulled-right">
+    
         
-          
-<a class="tags subtitle is-6" href="/tags/personal">#Personal</a>
+        
+        
+            
+        
+        
+            
+        
+    
+
+    
+    
+    
+
+    
+    
 
 
 
+
+    
+    
         
-      </div>
-      <h2 class="subtitle is-6">January 1, 2017</h2>
-      <h1 class="title"><a href="https://blog.danielcefram.com/a-new-start/">A New Start</a></h1>
-      <div class="content">
-        I decided to restart my blog yet again, and this time I&rsquo;m planning to just document my thoughts at least every month. I&rsquo;m looking forward to getting this goal done, specially with the fact that I&rsquo;m getting married in 2~3 weeks time!&hellip; Which means that I might actually have more things to write about :D
-A lot has happened since last year. I clocked a lot of extra hours of work, for the preparation of my wedding.
-        
-        <a class="button is-link" href="https://blog.danielcefram.com/a-new-start/" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
-        </a>
-        
-      </div>
-    </article>
+    
+
+
+    
+
+    
+        <p><span class="image center-image">
+            <img src="/images/2018/12/kahitsaan.svg" alt="Kahitsaan CLI tool" />
+        </span></p>
+    
+
+
+
+<p>Oh, and you can click on the link (depending on your terminal emulator though).</p>
+
+<h3 id="conclusion-takeaways">Conclusion/Takeaways</h3>
+
+<p>It&rsquo;s fun learning a new language when you have something to use it on. Although I could&rsquo;ve used bash to create this tool (you know <code>curl</code> right?), I still had fun writing this even though I never used an indentation-based language before aside from BASIC.</p>
+
+<p>As for the tool itself, I guess it&rsquo;s half useful since I need to open up my laptop to use it. Getting a web version done would be much more useful since most of the time, we would use this tool while walking around greenbelt&hellip; and using the phone is obviously much more convenient than using the laptop while walking :joy:</p>
+
+    </div>
     
   </div>
 </section>
+
 <section class="section">
   <div class="container">
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <div class="level-item">
-          
-          <a class="button" href="/page/3/">
-            <span class="page-icon left-icon is-small is-marginless">
-              <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-    
-    <line x1="20" y1="12" x2="4" y2="12"/>
-    <polyline points="10 18 4 12 10 6"/>
-    
-  </svg>
-
-            </span>
-            Newer
-          </a>
-          
-        </div>
-      </div>
-      <div class="level-right is-marginless">
-        <div class="level-item">
-          
-        </div>
-      </div>
-    </nav>
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'dcefram';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   </div>
 </section>
+
 
 <section class="section">
   <div class="container has-text-centered">
@@ -186,4 +228,3 @@ if (!doNotTrack) {
 
 </body>
 </html>
-

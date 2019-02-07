@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.47.1" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>Daniel Cefram&#39;s dump file</title>
+<title>Easily turn your app to Progressive Web Apps through webpack plugins | /dump</title>
 
 
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
@@ -75,94 +74,54 @@
 
 <section class="section">
   <div class="container">
-    
-    <article>
-      <div class="subtitle is-6 is-pulled-right">
-        
-          
-<a class="tags subtitle is-6" href="/tags/react">#React</a>
+    <div class="subtitle is-6 is-pulled-right">
+      
+      
+<a class="tags subtitle is-6" href="/tags/webpack">#Webpack</a>
 
 
 
-  
-  | <a class="tags subtitle is-6" href="/tags/javascript">#JavaScript</a>
-  
+      
+    </div>
+    <h2 class="subtitle is-6">March 18, 2017</h2>
+    <h1 class="title">Easily turn your app to Progressive Web Apps through webpack plugins</h1>
+      
+    <div class="content">
+      
 
-        
-      </div>
-      <h2 class="subtitle is-6">February 18, 2017</h2>
-      <h1 class="title"><a href="https://blog.danielcefram.com/using-datasets-to-avoid-inline-arrow-functions/">Using datasets to avoid inline arrow functions</a></h1>
-      <div class="content">
-        Adding an inline anonymous/arrow function in React is not recommended due to the nature of how react behaves. The render method would always be called each time a state or property is updated, which would then create a new function if we are using inline arrow functions, and then this would force the GC (garbage collector) to clean the previous arrow function.
-render() { // Not good :\  return &lt;div onClick={e =&gt; console.
-        
-        <a class="button is-link" href="https://blog.danielcefram.com/using-datasets-to-avoid-inline-arrow-functions/" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
-        </a>
-        
-      </div>
-    </article>
-    
-    <article>
-      <div class="subtitle is-6 is-pulled-right">
-        
-          
-<a class="tags subtitle is-6" href="/tags/personal">#Personal</a>
+<p>If ever we wanted our WebApp available even if the user does not have any internet connection, we would need to use service workers. But the thing with service workers is that they&rsquo;re not &ldquo;easy&rdquo; to implement. It&rsquo;s a good thing though that the GoogleChrome team released a node module that would generate the service worker code for your project: <a href="https://github.com/GoogleChrome/sw-precache" target="_blank">sw-precache</a>.</p>
 
+<p>You can use that node module in your gulp file when building/bundling your app. But we all know that gulp isn&rsquo;t the cool kid in the block anymore since webpack came around&hellip; So here&rsquo;s what you can use if ever you&rsquo;re using webpack in your build process and you would rather avoid adding gulp or any other build scripts:</p>
 
+<ul>
+<li><strong><a href="https://www.npmjs.com/package/sw-precache-webpack-plugin" target="_blank">sw-precache-webpack-plugin</a></strong> - This makes use of Google&rsquo;s own sw-precache node module&hellip; so it&rsquo;s  a wrapper to get sw-precache to easily work in webpack as a plugin</li>
+<li><strong><a href="https://github.com/NekR/offline-plugin" target="_blank">offline-plugin</a></strong> - The much more popular webpack plugin. I&rsquo;m not sure about sw-precache, but offline-plugin uses AppCache as a fallback for browsers that do not support Service Workers.</li>
+</ul>
 
-        
-      </div>
-      <h2 class="subtitle is-6">January 1, 2017</h2>
-      <h1 class="title"><a href="https://blog.danielcefram.com/a-new-start/">A New Start</a></h1>
-      <div class="content">
-        I decided to restart my blog yet again, and this time I&rsquo;m planning to just document my thoughts at least every month. I&rsquo;m looking forward to getting this goal done, specially with the fact that I&rsquo;m getting married in 2~3 weeks time!&hellip; Which means that I might actually have more things to write about :D
-A lot has happened since last year. I clocked a lot of extra hours of work, for the preparation of my wedding.
-        
-        <a class="button is-link" href="https://blog.danielcefram.com/a-new-start/" style="height:28px">
-          Read more
-          <span class="icon is-small">
-            <i class="fa fa-angle-double-right"></i>
-          </span>
-        </a>
-        
-      </div>
-    </article>
+<h3 id="my-take">My Take</h3>
+
+<p>I am using sw-precache-webpack-plugin for one of my projects, but my colleague suggested offline-plugin, and I&rsquo;m a little sold to that plugin due to the fact that they specified their fallback in case the browser does not have support for Service Workers&hellip; So yeah, if you&rsquo;re using webpack on your build process, I&rsquo;d suggest that you go for offline-plugin.</p>
+
+    </div>
     
   </div>
 </section>
+
 <section class="section">
   <div class="container">
-    <nav class="level is-mobile">
-      <div class="level-left">
-        <div class="level-item">
-          
-          <a class="button" href="/page/3/">
-            <span class="page-icon left-icon is-small is-marginless">
-              <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-    
-    <line x1="20" y1="12" x2="4" y2="12"/>
-    <polyline points="10 18 4 12 10 6"/>
-    
-  </svg>
-
-            </span>
-            Newer
-          </a>
-          
-        </div>
-      </div>
-      <div class="level-right is-marginless">
-        <div class="level-item">
-          
-        </div>
-      </div>
-    </nav>
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'dcefram';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   </div>
 </section>
+
 
 <section class="section">
   <div class="container has-text-centered">
@@ -186,4 +145,3 @@ if (!doNotTrack) {
 
 </body>
 </html>
-
