@@ -205,7 +205,7 @@
 
 
 <span style="color:#a6e22e">commands</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">name</span> =&gt; {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">command</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">`./commands/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">entry</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">`./commands/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">command</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">program</span>
     .<span style="color:#a6e22e">command</span>(<span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">command</span>)
     .<span style="color:#a6e22e">action</span>(<span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">action</span>)
