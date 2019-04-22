@@ -18,7 +18,7 @@
       <pubDate>Mon, 22 Apr 2019 15:50:22 +0800</pubDate>
       
       <guid>https://blog.danielcefram.com/nim-day-1-procs/</guid>
-      <description>I decided to learn Nim again, as I&amp;rsquo;m growing with the language I&amp;rsquo;m currently using at work. I&amp;rsquo;ll post my notes on what I&amp;rsquo;ve learned here in my blog just as I would have back then when I studied at school.
+      <description>I decided to learn Nim again, as I&amp;rsquo;m growing tired with the language I&amp;rsquo;m currently using at work. I&amp;rsquo;ll post my notes on what I&amp;rsquo;ve learned here in my blog just as I would have back then when I studied at school.
 I&amp;rsquo;m skipping datatypes section, since it&amp;rsquo;s pretty straightforward similar to other imperative compiled languages out there (Read more about Basic Datatypes)
 Also, this language syntax is similar to python.</description>
     </item>
