@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nim on /dump</title>
+    <link>https://blog.danielcefram.com/tags/nim/</link>
+    <description>Recent content in Nim on /dump</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://danielcefram.com&#34;&gt;Daniel Cefram&lt;/a&gt; 2018</copyright>
+    <lastBuildDate>Mon, 22 Apr 2019 15:50:22 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.danielcefram.com/tags/nim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nim Day 1 Procs</title>
+      <link>https://blog.danielcefram.com/nim-day-1-procs/</link>
+      <pubDate>Mon, 22 Apr 2019 15:50:22 +0800</pubDate>
+      
+      <guid>https://blog.danielcefram.com/nim-day-1-procs/</guid>
+      <description>I decided to learn Nim again, as I&amp;rsquo;m growing with the language I&amp;rsquo;m currently using at work. I&amp;rsquo;ll post my notes on what I&amp;rsquo;ve learned here in my blog just as I would have back then when I studied at school.
+I&amp;rsquo;m skipping datatypes section, since it&amp;rsquo;s pretty straightforward similar to other imperative compiled languages out there (Read more about Basic Datatypes)
+Also, this language syntax is similar to python.</description>
+    </item>
+    
+  </channel>
+</rss>

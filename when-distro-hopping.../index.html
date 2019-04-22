@@ -138,13 +138,12 @@ This should list all drives connected to your computer. Select the drive that ha
 <li><p>Execute <code>lsblk -l</code> to get the correct drive name</p></li>
 
 <li><p>Then we have to write the iso to the flash drive:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># umount /dev/sdX
-</span><span style="color:#75715e"></span># dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/path/to/downloaded.iso of<span style="color:#f92672">=</span>/dev/sdX bs<span style="color:#f92672">=</span>4M status<span style="color:#f92672">=</span>progress <span style="color:#f92672">&amp;&amp;</span> sync</code></pre></div></li>
-</ol>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># umount /dev/sdX</span>
+<span style="color:#75715e"># dd if=/path/to/downloaded.iso of=/dev/sdX bs=4M status=progress &amp;&amp; sync</span></code></pre></div>
 <h4 id="in-windows-1">In Windows</h4>
 
-<p>I personally use <a href="https://rufus.akeo.ie/" target="_blank">Rufus</a>, because we would still need to download cygwin to do this in the command line. Since I&rsquo;m going to download something extra anyways, I&rsquo;d rather go for the easier route.</p>
+<p>I personally use <a href="https://rufus.akeo.ie/" target="_blank">Rufus</a>, because we would still need to download cygwin to do this in the command line. Since I&rsquo;m going to download something extra anyways, I&rsquo;d rather go for the easier route.</p></li>
+</ol>
 
     </div>
     
