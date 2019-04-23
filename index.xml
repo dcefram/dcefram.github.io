@@ -7,17 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://danielcefram.com&#34;&gt;Daniel Cefram&lt;/a&gt; 2018</copyright>
-    <lastBuildDate>Mon, 22 Apr 2019 15:50:22 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 23 Apr 2019 10:00:25 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.danielcefram.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Nim Day 1 Procs</title>
-      <link>https://blog.danielcefram.com/nim-day-1-procs/</link>
+      <title>Learn Nim - Collections</title>
+      <link>https://blog.danielcefram.com/learn-nim-collections/</link>
+      <pubDate>Tue, 23 Apr 2019 10:00:25 +0800</pubDate>
+      
+      <guid>https://blog.danielcefram.com/learn-nim-collections/</guid>
+      <description>Just a continuation of the Learn Nim series that I&amp;rsquo;m jotting down while going through self studying Nim.
+So let&amp;rsquo;s talk about collections now, you know, arrays and the sort.
+Arrays Arrays in Nim is similar to C, wherein all the data is saved in the stack. This is unlike languages like Java where arrays are stored in the heap.
+What this means is that Arrays:
+ have an initial size are not resize-able are initialized with their default values if not set (for integers, 0.</description>
+    </item>
+    
+    <item>
+      <title>Learn Nim - Procs</title>
+      <link>https://blog.danielcefram.com/learn-nim-procs/</link>
       <pubDate>Mon, 22 Apr 2019 15:50:22 +0800</pubDate>
       
-      <guid>https://blog.danielcefram.com/nim-day-1-procs/</guid>
+      <guid>https://blog.danielcefram.com/learn-nim-procs/</guid>
       <description>I decided to learn Nim again, as I&amp;rsquo;m growing tired with the language I&amp;rsquo;m currently using at work. I&amp;rsquo;ll post my notes on what I&amp;rsquo;ve learned here in my blog just as I would have back then when I studied at school.
 I&amp;rsquo;m skipping datatypes section, since it&amp;rsquo;s pretty straightforward similar to other imperative compiled languages out there (Read more about Basic Datatypes)
 Also, this language syntax is similar to python.</description>
