@@ -7,85 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://danielcefram.com&#34;&gt;Daniel Cefram&lt;/a&gt; 2018</copyright>
-    <lastBuildDate>Thu, 07 Feb 2019 12:31:38 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 04 Mar 2019 14:10:06 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.danielcefram.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Co Working</title>
-      <link>https://blog.danielcefram.com/tags/co-working/</link>
-      <pubDate>Thu, 07 Feb 2019 12:31:38 +0800</pubDate>
-      
-      <guid>https://blog.danielcefram.com/tags/co-working/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Crystal</title>
-      <link>https://blog.danielcefram.com/tags/crystal/</link>
-      <pubDate>Wed, 19 Dec 2018 09:12:14 +0800</pubDate>
-      
-      <guid>https://blog.danielcefram.com/tags/crystal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Css</title>
-      <link>https://blog.danielcefram.com/tags/css/</link>
-      <pubDate>Sat, 04 Mar 2017 08:13:23 +0000</pubDate>
-      
-      <guid>https://blog.danielcefram.com/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Geek Ism</title>
-      <link>https://blog.danielcefram.com/tags/geek-ism/</link>
-      <pubDate>Sat, 16 Sep 2017 16:21:10 +0800</pubDate>
-      
-      <guid>https://blog.danielcefram.com/tags/geek-ism/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Golang</title>
-      <link>https://blog.danielcefram.com/tags/golang/</link>
-      <pubDate>Sat, 04 Nov 2017 21:31:38 +0800</pubDate>
-      
-      <guid>https://blog.danielcefram.com/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript</title>
-      <link>https://blog.danielcefram.com/tags/javascript/</link>
-      <pubDate>Wed, 23 May 2018 14:05:09 +0800</pubDate>
-      
-      <guid>https://blog.danielcefram.com/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Life</title>
-      <link>https://blog.danielcefram.com/tags/life/</link>
-      <pubDate>Thu, 07 Feb 2019 12:31:38 +0800</pubDate>
-      
-      <guid>https://blog.danielcefram.com/tags/life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nim</title>
-      <link>https://blog.danielcefram.com/tags/nim/</link>
-      <pubDate>Mon, 22 Apr 2019 15:50:22 +0800</pubDate>
-      
-      <guid>https://blog.danielcefram.com/tags/nim/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Node</title>
+      <title>node</title>
       <link>https://blog.danielcefram.com/tags/node/</link>
       <pubDate>Mon, 04 Mar 2019 14:10:06 +0800</pubDate>
       
@@ -94,34 +22,34 @@
     </item>
     
     <item>
-      <title>Personal</title>
-      <link>https://blog.danielcefram.com/tags/personal/</link>
-      <pubDate>Mon, 11 Sep 2017 14:46:53 +0800</pubDate>
+      <title>co-working</title>
+      <link>https://blog.danielcefram.com/tags/co-working/</link>
+      <pubDate>Thu, 07 Feb 2019 12:31:38 +0800</pubDate>
       
-      <guid>https://blog.danielcefram.com/tags/personal/</guid>
+      <guid>https://blog.danielcefram.com/tags/co-working/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>React</title>
-      <link>https://blog.danielcefram.com/tags/react/</link>
-      <pubDate>Wed, 13 Sep 2017 00:34:15 +0800</pubDate>
+      <title>life</title>
+      <link>https://blog.danielcefram.com/tags/life/</link>
+      <pubDate>Thu, 07 Feb 2019 12:31:38 +0800</pubDate>
       
-      <guid>https://blog.danielcefram.com/tags/react/</guid>
+      <guid>https://blog.danielcefram.com/tags/life/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Talk</title>
-      <link>https://blog.danielcefram.com/tags/talk/</link>
-      <pubDate>Wed, 23 May 2018 14:05:09 +0800</pubDate>
+      <title>crystal</title>
+      <link>https://blog.danielcefram.com/tags/crystal/</link>
+      <pubDate>Wed, 19 Dec 2018 09:12:14 +0800</pubDate>
       
-      <guid>https://blog.danielcefram.com/tags/talk/</guid>
+      <guid>https://blog.danielcefram.com/tags/crystal/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Tools</title>
+      <title>tools</title>
       <link>https://blog.danielcefram.com/tags/tools/</link>
       <pubDate>Wed, 19 Dec 2018 09:12:14 +0800</pubDate>
       
@@ -130,11 +58,56 @@
     </item>
     
     <item>
-      <title>Webpack</title>
-      <link>https://blog.danielcefram.com/tags/webpack/</link>
-      <pubDate>Sat, 18 Mar 2017 03:26:00 +0000</pubDate>
+      <title>javascript</title>
+      <link>https://blog.danielcefram.com/tags/javascript/</link>
+      <pubDate>Wed, 23 May 2018 14:05:09 +0800</pubDate>
       
-      <guid>https://blog.danielcefram.com/tags/webpack/</guid>
+      <guid>https://blog.danielcefram.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>talk</title>
+      <link>https://blog.danielcefram.com/tags/talk/</link>
+      <pubDate>Wed, 23 May 2018 14:05:09 +0800</pubDate>
+      
+      <guid>https://blog.danielcefram.com/tags/talk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://blog.danielcefram.com/tags/golang/</link>
+      <pubDate>Sat, 04 Nov 2017 21:31:38 +0800</pubDate>
+      
+      <guid>https://blog.danielcefram.com/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>https://blog.danielcefram.com/tags/react/</link>
+      <pubDate>Wed, 13 Sep 2017 00:34:15 +0800</pubDate>
+      
+      <guid>https://blog.danielcefram.com/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>personal</title>
+      <link>https://blog.danielcefram.com/tags/personal/</link>
+      <pubDate>Mon, 11 Sep 2017 14:46:53 +0800</pubDate>
+      
+      <guid>https://blog.danielcefram.com/tags/personal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>https://blog.danielcefram.com/tags/css/</link>
+      <pubDate>Sat, 04 Mar 2017 08:13:23 +0000</pubDate>
+      
+      <guid>https://blog.danielcefram.com/tags/css/</guid>
       <description></description>
     </item>
     

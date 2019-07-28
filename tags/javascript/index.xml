@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javascript on /dump</title>
+    <title>javascript on /dump</title>
     <link>https://blog.danielcefram.com/tags/javascript/</link>
-    <description>Recent content in Javascript on /dump</description>
+    <description>Recent content in javascript on /dump</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; &lt;a href=&#34;https://danielcefram.com&#34;&gt;Daniel Cefram&lt;/a&gt; 2018</copyright>
@@ -44,6 +44,16 @@ const ids = [1, 2, 3, 4]; for (var id of ids) { fetch(`${API_URL}/${id}`).then((
     </item>
     
     <item>
+      <title>Easily turn your app to Progressive Web Apps through webpack plugins</title>
+      <link>https://blog.danielcefram.com/easily-turn-your-app-to-progressive-web-apps-through-webpack-plugins/</link>
+      <pubDate>Sat, 18 Mar 2017 03:26:00 +0000</pubDate>
+      
+      <guid>https://blog.danielcefram.com/easily-turn-your-app-to-progressive-web-apps-through-webpack-plugins/</guid>
+      <description>If ever we wanted our WebApp available even if the user does not have any internet connection, we would need to use service workers. But the thing with service workers is that they&amp;rsquo;re not &amp;ldquo;easy&amp;rdquo; to implement. It&amp;rsquo;s a good thing though that the GoogleChrome team released a node module that would generate the service worker code for your project: sw-precache.
+You can use that node module in your gulp file when building/bundling your app.</description>
+    </item>
+    
+    <item>
       <title>Responsive web designs through EQCSS</title>
       <link>https://blog.danielcefram.com/responsive-web-designs-through-eqcss/</link>
       <pubDate>Sat, 04 Mar 2017 08:13:23 +0000</pubDate>
@@ -51,18 +61,6 @@ const ids = [1, 2, 3, 4]; for (var id of ids) { fetch(`${API_URL}/${id}`).then((
       <guid>https://blog.danielcefram.com/responsive-web-designs-through-eqcss/</guid>
       <description>EQCSS allows us to style elements based on the element&amp;rsquo;s state. It is similar to CSS&amp;rsquo; media queries, but with the added feature to style elements based on the element&amp;rsquo;s dimension and contents, and not just based on the browser&amp;rsquo;s width and height.
 This got me interested since my previous project&amp;rsquo;s longstanding issue was with how the app should look like based on a combination of two factors: The window&amp;rsquo;s size and the number of elements inside the container.</description>
-    </item>
-    
-    <item>
-      <title>Using JSON parse and stringify to clone objects</title>
-      <link>https://blog.danielcefram.com/using-json-parse-and-stringify-to-clone-objects/</link>
-      <pubDate>Sat, 25 Feb 2017 05:50:12 +0000</pubDate>
-      
-      <guid>https://blog.danielcefram.com/using-json-parse-and-stringify-to-clone-objects/</guid>
-      <description>Immutability is important. The stackoverflow article that I just linked would explain why immutability is important.
-I am accustomed to using Immutable.js at work, but when I came across an ancient project that didn&amp;rsquo;t make sense to add a new library just for using immutable objects, I had to resort to Object.assign.
-But the problem with Object.assign though is that you cannot use it to modify deep properties.
-Take this for example:</description>
     </item>
     
     <item>
