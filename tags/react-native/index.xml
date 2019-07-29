@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>react-native on /dump</title>
+    <link>https://blog.danielcefram.com/tags/react-native/</link>
+    <description>Recent content in react-native on /dump</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://danielcefram.com&#34;&gt;Daniel Cefram&lt;/a&gt; 2018</copyright>
+    <lastBuildDate>Mon, 29 Jul 2019 07:50:21 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.danielcefram.com/tags/react-native/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Impressions on Expo After Three Months</title>
+      <link>https://blog.danielcefram.com/impressions-on-expo-after-three-months/</link>
+      <pubDate>Mon, 29 Jul 2019 07:50:21 +0800</pubDate>
+      
+      <guid>https://blog.danielcefram.com/impressions-on-expo-after-three-months/</guid>
+      <description>After three months of development using expo for an MVP, I&amp;rsquo;d like to share some feedback on my experience on using the managed platform. Do note that my prior experience in react native before this project was just a month of R&amp;amp;D two years ago.
+It&amp;rsquo;s React for mobile Since we use React for most of the frontend of our web applications, we thought that React Native would be the best choice as it would have less &amp;ldquo;barrier of entry&amp;rdquo; for the existing workforce, since we&amp;rsquo;re already familiar with the syntax, concepts, and tooling of React.</description>
+    </item>
+    
+  </channel>
+</rss>
